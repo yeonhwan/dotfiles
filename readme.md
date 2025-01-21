@@ -40,7 +40,7 @@ Use GNU Stow to link your dotfiles to their appropriate locations in the home di
 - To stow all configurations at once:
 
   ```bash
-  cd ~/.dotfiles
+  cd ~/dotfiles
   stow .
   ```
 
