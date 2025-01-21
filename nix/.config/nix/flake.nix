@@ -44,34 +44,12 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.yh = import ./home/home.nix;
+              users.${username} = import ./home/home.nix;
               backupFileExtension = "bak";
             };
           }
         ];
       };
     };
-
-    # darwinConfigurations.${username} = nix-darwin.lib.darwinSystem {
-    #   inherit system specialArgs;
-    #   modules = [ 
-    #     # nix & system base configuration
-    #     ./modules/nix-core.nix
-    #     # darwin system configuration 
-    #     ./modules/system.nix
-    #     # brew
-    #     ./modules/brew.nix
-    #     # user level & packages configuration
-    #     home-manager.darwinModules.home-manager 
-    #     {
-    #       home-manager = {
-    #         useGlobalPkgs = true;
-    #         useUserPackages = true;
-    #         users.yh = import ./home/home.nix;
-    #         backupFileExtension = "bak";
-    #       };
-    #     }
-    #   ];
-    # };
   };
 }
