@@ -1,6 +1,6 @@
 
 # Build darwin flake using:
-# $ darwin-rebuild build --flake 
+# $ darwin-rebuild build --impure --flake 
 
 {
   description = "YH nix-darwin system flake";
@@ -16,9 +16,9 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }:
 
   let
-    username = "yh";
+    username = builtins.getEnv "USER";
     useremail = "yeonhwan619@gmail.com";
-    system = "aarch64-darwin"; 
+    system = builtins.currentSystem;
     hostname = "YH-macbook";
 
     specialArgs = inputs // { 
@@ -28,26 +28,50 @@
   in 
 
   {
-    darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
-      inherit system specialArgs;
-      modules = [ 
-        # nix & system base configuration
-        ./modules/nix-core.nix
-        # darwin system configuration 
-        ./modules/system.nix
-        # brew
-        ./modules/brew.nix
-        # user level & packages configuration
-        home-manager.darwinModules.home-manager 
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.yh = import ./home/home.nix;
-            backupFileExtension = "bak";
-          };
-        }
-      ];
+    darwinConfigurations = {
+      default = nix-darwin.lib.darwinSystem {
+        inherit system specialArgs;
+        modules = [ 
+          # nix & system base configuration
+          ./modules/nix-core.nix
+          # darwin system configuration 
+          ./modules/system.nix
+          # brew
+          ./modules/brew.nix
+          # user level & packages configuration
+          home-manager.darwinModules.home-manager 
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.yh = import ./home/home.nix;
+              backupFileExtension = "bak";
+            };
+          }
+        ];
+      };
     };
+
+    # darwinConfigurations.${username} = nix-darwin.lib.darwinSystem {
+    #   inherit system specialArgs;
+    #   modules = [ 
+    #     # nix & system base configuration
+    #     ./modules/nix-core.nix
+    #     # darwin system configuration 
+    #     ./modules/system.nix
+    #     # brew
+    #     ./modules/brew.nix
+    #     # user level & packages configuration
+    #     home-manager.darwinModules.home-manager 
+    #     {
+    #       home-manager = {
+    #         useGlobalPkgs = true;
+    #         useUserPackages = true;
+    #         users.yh = import ./home/home.nix;
+    #         backupFileExtension = "bak";
+    #       };
+    #     }
+    #   ];
+    # };
   };
 }

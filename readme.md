@@ -17,12 +17,14 @@ Alternatively, you can use the following command:
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
+- Need to setup custom username & hostname before the building process
+
 ## 2. Build the Flake
 
 Build and apply the `nix-darwin` configuration using your `flake.nix`:
 
 ```bash
-nix run nix-darwin switch --flake ~/.dotfiles/nix/.config/nix
+nix run nix-darwin switch --impure --flake ~/.dotfiles/nix/.config/nix
 ```
 
 ## 3. Stow Dotfiles
@@ -64,9 +66,10 @@ After completing the steps, verify the setup:
 
 1. **Using `darwin-rebuild` Instead of `nix run`**:
    After the initial `nix-darwin` setup, you can use the following command to rebuild and apply configuration changes:
+   _Note_ : --impure flag is needed to access system enviornment variables
 
    ```bash
-   darwin-rebuild switch --flake ~/.dotfiles/nix
+   darwin-rebuild switch --impure --flake ~/.dotfiles/nix
 
    # can use shell alias after building the flake
    buildflake

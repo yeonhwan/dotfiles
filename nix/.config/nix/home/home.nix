@@ -45,7 +45,7 @@
       kittyconfig = "nvim ~/.config/kitty";
       vim = "nvim";
       imgpr = "kitten icat $(fd -e jpg -e svg -e webp -e png -e jpeg -e gif | fzf)";
-      buildflake = "darwin-rebuild switch --flake \"$(readlink -f ~/.config/nix)\"#$HOSTNAME";
+      buildflake = "darwin-rebuild switch --impure --flake \"$(readlink -f ~/.config/nix)\"#default";
       ls = "eza --icons=always";
       cd = "z";
       lg = "lazygit";
@@ -109,10 +109,6 @@
       # Bun completions
       [ -s "/Users/yh/.bun/_bun" ] && source "/Users/yh/.bun/_bun"
         '';
-    };
-
-    neovim = {
-      enable = true;
     };
   };
 }
