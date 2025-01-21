@@ -41,7 +41,7 @@
     shellAliases = {
       ".." = "cd ..";
       desktop = "cd /Users/yh/desktop";
-      nixconfig = "cd ~/.config/nix && nvim";
+      nixconfig = "cd ~/.config/nix && nvim .";
       kittyconfig = "nvim ~/.config/kitty";
       vim = "nvim";
       imgpr = "kitten icat $(fd -e jpg -e svg -e webp -e png -e jpeg -e gif | fzf)";
@@ -109,6 +109,10 @@
       # Bun completions
       [ -s "/Users/yh/.bun/_bun" ] && source "/Users/yh/.bun/_bun"
         '';
+    };
+
+    neovim = {
+      enable = true;
     };
   };
 }
