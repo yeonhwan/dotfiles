@@ -5,26 +5,32 @@
 Clone your dotfiles repository to the desired location on your system:
 
 ```bash
-git clone git@github.com:yeonhwan/dotfiles.git ~/.dotfiles
+git clone git@github.com:yeonhwan/dotfiles.git ~/dotfiles
+# if you have not set up SSH keys, use HTTPS
+git clone https://github.com/LnL7/nix-darwin.git ~/dotfiles
 ```
 
 ## 1. Install Nix
 
 Follow the Nix installation process as described on the official website: <https://nixos.org/download/>.
+
 Alternatively, you can use the following command:
 
 ```bash
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-- Need to setup custom username & hostname before the building process
-
 ## 2. Build the Flake
 
 Build and apply the `nix-darwin` configuration using your `flake.nix`:
 
 ```bash
-nix run nix-darwin switch --impure --flake ~/.dotfiles/nix/.config/nix
+# you should enable nix flake and nix-command first
+
+mkdir -p ~/.config/nix && echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
+
+# this is the default flake for all environments (not plan to support multiple environments yet)
+nix run nix-darwin -- switch --impure --flake ~/.dotfiles/nix/.config/nix#default
 ```
 
 ## 3. Stow Dotfiles
@@ -75,21 +81,29 @@ After completing the steps, verify the setup:
    buildflake
    ```
 
-2. **Preview Stow Changes**:
+2. **Homebrew is not installed**:
+
+   if the nix-darwin doesn't install homebrew, you can install it manually by running the following command:
+
+   ```bash
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+3. **Preview Stow Changes**:
    Before applying `stow`, preview the changes to avoid overwriting existing files:
 
    ```bash
    stow --no .
    ```
 
-3. **SSH Key Issues with Git**:
+4. **SSH Key Issues with Git**:
    Ensure your SSH keys are properly set up for GitHub. Test them with:
 
    ```bash
    ssh -T git@github.com
    ```
 
-4. **Resolving Path Conflicts**:
+5. **Resolving Path Conflicts**:
    If `~/.config/nix-darwin` exists and is causing conflicts, you can either:
 
    - Remove it and replace it with a symlink to your flake:
@@ -104,3 +118,7 @@ After completing the steps, verify the setup:
      ```bash
      darwin-rebuild switch --flake ~/.dotfiles/nix
      ```
+
+6. **If you encounter Brew package error with Application.app**:
+
+   Delete the Application.app from the /Applications directory and reinstall the package with brew.
