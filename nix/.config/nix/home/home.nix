@@ -12,6 +12,16 @@
   programs = {
     home-manager.enable = true;
 
+    git = {
+        enable = true;
+        userName = "yeonhwan";
+        userEmail = "yeonhwan619@gmail.com";
+        extraConfig = {
+            init.defaultBranch = "main";
+            pull.rebase = true;
+        };
+    };
+
     # zsh configuration is done through nix-home-manager
     # .zshrc / .zshenv is locked
     zsh = {
