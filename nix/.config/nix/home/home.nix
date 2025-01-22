@@ -56,7 +56,7 @@
     shellAliases = {
       ".." = "cd ..";
       desktop = "cd /Users/yh/desktop";
-      nixconfig = "cd ~/.config/nix && nvim .";
+      dotconfig = "cd ~/dotfiles/ && nvim";
       kittyconfig = "nvim ~/.config/kitty";
       vim = "nvim";
       imgpr = "kitten icat $(fd -e jpg -e svg -e webp -e png -e jpeg -e gif | fzf)";
@@ -81,7 +81,7 @@
       {
           name = "zsh-fzf-tab";
           src = pkgs.zsh-fzf-tab;
-          file = "share/zsh-fzf-tab/zsh-fzf-tab.plugin.zsh";
+          file = "share/fzf-tab/fzf-tab.zsh";
       }
     ];
 
