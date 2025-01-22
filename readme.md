@@ -103,22 +103,20 @@ After completing the steps, verify the setup:
    ssh -T git@github.com
    ```
 
-5. **Resolving Path Conflicts**:
-   If `~/.config/nix-darwin` exists and is causing conflicts, you can either:
-
-   - Remove it and replace it with a symlink to your flake:
-
-     ```bash
-     rm -rf ~/.config/nix-darwin
-     ln -sf ~/.dotfiles/nix ~/.config/nix-darwin
-     ```
-
-   - Or always reference the correct path in your commands:
-
-     ```bash
-     darwin-rebuild switch --flake ~/.dotfiles/nix
-     ```
-
-6. **If you encounter Brew package error with Application.app**:
+5. **If you encounter Brew package error with Application.app**:
 
    Delete the Application.app from the /Applications directory and reinstall the package with brew.
+
+6. **Commands**:
+
+   ```bash
+    # Update packages and rebuild the flake (brew packages are updated when rebuilding is done)
+    nix flake update
+    # Garbage Collecting
+
+    # Rollback to certain version
+
+    sudo nix-collect-garbage -d
+
+    # switch to certain commit and rebuild the system
+   ```
