@@ -22,6 +22,11 @@
         };
     };
 
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     # zsh configuration is done through nix-home-manager
     # .zshrc / .zshenv is locked
     zsh = {
@@ -72,6 +77,11 @@
         name = "zsh-autosuggestions";
         src = pkgs.zsh-autosuggestions;
         file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
+      }
+      {
+          name = "zsh-fzf-tab";
+          src = pkgs.zsh-fzf-tab;
+          file = "share/zsh-fzf-tab/zsh-fzf-tab.plugin.zsh";
       }
     ];
 

@@ -27,6 +27,8 @@
 
     #shell
     zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-fzf-tab
     
     # dev
     lazygit

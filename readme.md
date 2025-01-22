@@ -113,10 +113,8 @@ After completing the steps, verify the setup:
     # Update packages and rebuild the flake (brew packages are updated when rebuilding is done)
     nix flake update
     # Garbage Collecting
-
-    # Rollback to certain version
-
     sudo nix-collect-garbage -d
 
+    # Rollback to certain version
     # switch to certain commit and rebuild the system
    ```
