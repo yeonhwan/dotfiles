@@ -30,6 +30,7 @@
         ];
 
         casks = [
+          "zen-browser"
           "raycast"
           "aerospace"
           "kitty"
