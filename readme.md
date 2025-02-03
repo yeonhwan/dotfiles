@@ -118,3 +118,10 @@ After completing the steps, verify the setup:
     # Rollback to certain version
     # switch to certain commit and rebuild the system
    ```
+
+7. **If xCode is not installed**
+
+   ```bash
+   xcode-select --install
+
+   ```
