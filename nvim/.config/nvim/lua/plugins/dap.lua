@@ -75,6 +75,8 @@ return {
           request = "launch",
           program = "${file}",
           cwd = "${workspaceFolder}",
+          console = "integratedTerminal",
+          sourceMaps = true,
         },
         {
           name = "Attach to process",
@@ -82,6 +84,8 @@ return {
           request = "attach",
           processId = require("dap.utils").pick_process,
           cwd = "${workspaceFolder}",
+          console = "integratedTerminal",
+          sourceMaps = true,
         },
         {
           name = "Launch Chrome",
@@ -104,6 +108,7 @@ return {
           end,
           webRoot = vim.fn.getcwd(),
           sourceMaps = true,
+          console = "integratedTerminal",
         },
       }
     end
