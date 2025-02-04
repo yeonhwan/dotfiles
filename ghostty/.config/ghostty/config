@@ -1,15 +1,14 @@
-j# fonts
-font-family = JetBrainsMonoNL Nerd Font Mono
+# fonts
+font-family = "JetBrainsMono Nerd Font Mono"
 font-synthetic-style = true
-font-feature = calt
 font-size = 15.0
+font-thicken = true
+font-thicken-strength = 50
+font-feature = liga
+
 
 # systems
-theme = /Applications/Ghostty.app/Contents/Resources/ghostty/themes/Ryuuko
-background-opacity = 0.9
-background-blur-radius = 20
-window-padding-x = 10
-window-padding-y = 10
+theme = /Applications/Ghostty.app/Contents/Resources/ghostty/themes/terafox
 macos-titlebar-style = hidden
 macos-option-as-alt = true
 
@@ -20,5 +19,19 @@ keybind = super+[=goto_split:left
 keybind = super+'=resize_split:right,10
 keybind = super+;=resize_split:left,10
 keybind = super+,=open_config
+
+# window
+window-decoration = none
+window-padding-x = 10
+window-padding-y = 10
+background-opacity = 0.7
+background-blur-radius = 40
+
+# cursor
+cursor-style = block
+
+# icon
+macos-icon = custom-style
+macos-icon-frame = beige
 
 

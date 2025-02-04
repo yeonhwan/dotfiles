@@ -30,7 +30,6 @@
         ];
 
         casks = [
-          "zen-browser"
           "raycast"
           "aerospace"
           "kitty"
@@ -41,6 +40,7 @@
           "iina"
           "obsidian"
           "karabiner-elements"
+          "ghostty"
         ];
     };
 
