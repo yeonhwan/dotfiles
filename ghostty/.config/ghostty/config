@@ -1,14 +1,14 @@
 # fonts
 font-family = "JetBrainsMono Nerd Font Mono"
 font-synthetic-style = true
-font-size = 15.0
+font-size = 14.0
 font-thicken = true
 font-thicken-strength = 50
 font-feature = liga
 
 
 # systems
-theme = /Applications/Ghostty.app/Contents/Resources/ghostty/themes/terafox
+theme = /Applications/Ghostty.app/Contents/Resources/ghostty/themes/nord-wave
 macos-titlebar-style = hidden
 macos-option-as-alt = true
 
