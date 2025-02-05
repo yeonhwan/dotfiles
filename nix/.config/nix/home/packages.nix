@@ -32,6 +32,7 @@
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-fzf-tab
+    nushell
     
     # dev
     lazygit
