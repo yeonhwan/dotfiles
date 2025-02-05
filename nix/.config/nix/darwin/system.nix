@@ -28,7 +28,7 @@
           "Applications/KakaoTalk.app"
           "Applications/Arc.app"
           "Applications/Ghostty.app"
-          "Applications/Visual Studio Code.app"
+          "Applications/Obsidian.app"
           "System/Applications/System Settings.app"
           ];
         };

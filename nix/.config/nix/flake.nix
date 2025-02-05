@@ -33,11 +33,11 @@
         inherit system specialArgs;
         modules = [ 
           # nix & system base configuration
-          ./modules/nix-core.nix
+          ./darwin/nix-core.nix
           # darwin system configuration 
-          ./modules/system.nix
+          ./darwin/system.nix
           # brew
-          ./modules/brew.nix
+          ./darwin/brew.nix
           # user level & packages configuration
           home-manager.darwinModules.home-manager 
           {

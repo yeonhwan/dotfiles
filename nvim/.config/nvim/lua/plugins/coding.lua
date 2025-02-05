@@ -16,6 +16,11 @@ return {
     keys = {
       -- overriding default dial keymaps to <C-i>
       {
+        "<C-a>",
+        nil,
+        mode = { "n", "v" },
+      },
+      {
         "<C-i>",
         function()
           return require("dial.map").inc_normal()
