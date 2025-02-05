@@ -24,7 +24,10 @@
     thefuck
     tldr
     ripgrep
+    tmux
+    tmuxinator
 
+    
     #shell
     zsh-syntax-highlighting
     zsh-autosuggestions

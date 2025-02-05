@@ -167,45 +167,6 @@
       };
     };
 
-
-    tmux = {
-      enable = true;
-      extraConfig = ''
-                    # prefix bind
-                      unbind C-b
-                      set -g prefix C-c
-                    
-                    # escape time respond
-                      set -s escape-time 0
-
-                    set-option -g status-position top
-                    
-                    # reset C-r to reload config
-                      bind r source-file ~/.config/tmux/tmux.conf \; display-message "Config reloaded"
-                      set -g mouse on
-
-                    # Example keybindings
-                      bind | split-window -h
-                      bind - split-window -v
-                      bind h select-pane -L
-                      bind j select-pane -D
-                      bind k select-pane -U
-                      bind l select-pane -R
-
-                    # Custom keybindings for resizing panes using Ctrl+b followed by h, j, k, l
-                      bind-key -r Left resize-pane -L 5
-                      bind-key -r Down resize-pane -D 5
-                      bind-key -r Up resize-pane -U 5
-                      bind-key -r Right resize-pane -R 5
-      '';
-      plugins = with pkgs ; [
-        {
-          plugin = tmuxPlugins.nord;
-        }
-      ];
-
-    };
-
     # zsh configuration is done through nix-home-manager
     # .zshrc / .zshenv is locked
     zsh = {
