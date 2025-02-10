@@ -23,4 +23,14 @@ return {
       })
     end,
   },
+  -- whichkey
+  {
+    "folke/which-key.nvim",
+    opts = {
+      spec = {
+        { "g<C-a>", hidden = true },
+        { "g<C-x>", hidden = true },
+      },
+    },
+  },
 }

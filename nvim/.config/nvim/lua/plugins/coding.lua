@@ -14,12 +14,6 @@ return {
   {
     "monaqa/dial.nvim",
     keys = {
-      -- overriding default dial keymaps to <C-i>
-      {
-        "<C-a>",
-        nil,
-        mode = { "n", "v" },
-      },
       {
         "<C-i>",
         function()

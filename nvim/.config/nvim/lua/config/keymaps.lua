@@ -15,7 +15,9 @@ Map("i", "jj", "<ESC>")
 -- Increment / Decrement
 Map("n", "+", "<C-a>")
 Map("n", "-", "<C-x>")
-
+-- set to nil not to collapse with select all
+vim.keymap.set("n", "g<C-a>", "")
+vim.keymap.set("n", "g<C-x>", "")
 -- Select all
 Map("n", "<C-a>", "gg<S-v>G")
 
