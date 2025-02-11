@@ -26,6 +26,7 @@
     ripgrep
     tmux
     tmuxinator
+    httpie
 
     
     #shell
