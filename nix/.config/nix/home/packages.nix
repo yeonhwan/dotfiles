@@ -38,6 +38,7 @@
     # dev
     lazygit
     neovim
+    bun
 
     # misc
     btop

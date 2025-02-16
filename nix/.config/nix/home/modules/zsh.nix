@@ -87,9 +87,6 @@
       # NVM
       [ -s "$BREW_INSTALLED/nvm/nvm.sh" ] && . "$BREW_INSTALLED/nvm/nvm.sh"
       [ -s "$BREW_INSTALLED/nvm/etc/bash_completion" ] && . "$BREW_INSTALLED/nvm/etc/bash_completion"
-
-      # Bun completions
-      [ -s "/Users/yh/.bun/_bun" ] || source "/Users/yh/.bun/_bun"
     '';
   };
 }
