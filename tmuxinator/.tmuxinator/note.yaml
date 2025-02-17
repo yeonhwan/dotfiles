@@ -1,0 +1,9 @@
+name: +note
+
+root: ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/MySpace/
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim

@@ -35,6 +35,7 @@
       lg = "lazygit";
       ll = "ls -al";
       tm = "tmux";
+      tmx = "tmuxinator"
     };
 
     plugins = [

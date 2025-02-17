@@ -1,0 +1,10 @@
+name: +dev
+
+root: ~/Desktop/Dev/
+
+windows:
+  - editor:
+      layout: main-horizontal
+      panes:
+        - yazi
+        - zsh

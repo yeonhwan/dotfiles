@@ -29,6 +29,7 @@
       neovim 
       git
       home-manager
+      libiconv
     ];
     shells = [ pkgs."zsh" ];
     systemPath = [
