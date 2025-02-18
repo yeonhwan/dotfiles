@@ -1,0 +1,10 @@
+name: +config
+
+root: ~/dotfiles
+
+windows:
+  - editor:
+      layout: main-horizontal
+      panes:
+        - vim
+        - lazygit
