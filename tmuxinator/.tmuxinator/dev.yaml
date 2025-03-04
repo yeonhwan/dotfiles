@@ -6,5 +6,5 @@ windows:
   - editor:
       layout: main-horizontal
       panes:
-        - yazi
+        - yy
         - zsh
