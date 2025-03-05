@@ -15,11 +15,10 @@ Map("i", "jj", "<ESC>")
 -- Increment / Decrement
 Map("n", "+", "<C-a>")
 Map("n", "-", "<C-x>")
+
 -- set to nil not to collapse with select all
-vim.keymap.set("n", "g<C-a>", "")
-vim.keymap.set("n", "g<C-x>", "")
--- Select all
-Map("n", "<C-a>", "gg<S-v>G")
+vim.keymap.set("n", "g<C-a>", "", { noremap = true })
+vim.keymap.set("n", "g<C-x>", "", { noremap = true })
 
 -- Jumplist
 Map("n", "<C-m>", "<C-i>")
@@ -27,9 +26,9 @@ Map("n", "<C-m>", "<C-i>")
 -- Tab
 Map("n", "<leader>to", ":tabnew<Return>")
 Map("n", "<leader>tx", ":tabclose<Return>")
-Map("n", "<leader>tn", ":tabn<Return>")
 Map("n", "<leader>tp", ":tabp<Return>")
 Map("n", "<leader>tf", ":tabnew %<Return>")
+Map("n", "<leader>tn", ":tabn<Return>")
 
 -- Split window controls
 Map("n", "<C-w>m", ":vsplit<Return>")
@@ -72,3 +71,6 @@ Map("n", "<leader>nh", ":nohlsearch<CR>")
 Map("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end)
+
+-- Select all
+Map("n", "<C-a>", "gg<S-v>G")

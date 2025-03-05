@@ -15,6 +15,20 @@ return {
     "monaqa/dial.nvim",
     keys = {
       {
+        "<C-a>",
+        vim.NIL,
+        expr = true,
+        desc = "",
+        mode = { "n", "v" },
+      },
+      {
+        "g<C-a>",
+        vim.NIL,
+        expr = true,
+        desc = "",
+        mode = { "n", "p" },
+      },
+      {
         "<C-i>",
         function()
           return require("dial.map").inc_normal()
