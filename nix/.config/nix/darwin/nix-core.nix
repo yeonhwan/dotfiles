@@ -4,9 +4,6 @@
   nix.settings.experimental-features = "nix-command flakes";
   nix.package = pkgs.nix;
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
-  
   # nixpkgs
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;

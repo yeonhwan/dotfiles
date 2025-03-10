@@ -27,6 +27,7 @@
           "node"
           "mas"
           "deno"
+          "postgresql@17"
         ];
 
         casks = [
