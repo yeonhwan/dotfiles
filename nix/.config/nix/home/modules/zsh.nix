@@ -16,7 +16,7 @@
     };
 
     sessionVariables = {
-      PATH = "/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.bun/bin:$HOME/.console-ninja/.bin:$PATH";
+      PATH = "/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.bun/bin:$HOME:/opt/homebrew/opt/postgresql@17/bin:$PATH";
     };
 
     # aliases
