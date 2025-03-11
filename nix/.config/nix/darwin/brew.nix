@@ -42,6 +42,7 @@
           "obsidian"
           "karabiner-elements"
           "ghostty"
+          "pgadmin4"
         ];
     };
 
