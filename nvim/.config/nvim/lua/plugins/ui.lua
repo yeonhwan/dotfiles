@@ -6,6 +6,15 @@ return {
       keymap = {
         preset = "super-tab",
       },
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+        providers = {
+          snippets = {
+            min_keyword_length = 2,
+            score_offset = 4,
+          },
+        },
+      },
     },
   },
   -- modes nvim
