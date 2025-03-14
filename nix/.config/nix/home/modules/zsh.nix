@@ -17,8 +17,8 @@
 
     sessionVariables = {
       # pnpm global directory added
-      PNPM_HOME = "~/.local/share/pnpm";
-      PATH = "/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.bun/bin:$HOME:/opt/homebrew/opt/postgresql@17/bin:~/.local/share/pnpm:$PATH";
+      PNPM_HOME = "$HOME/.local/share/pnpm";
+      PATH = "/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.bun/bin:$HOME:/opt/homebrew/opt/postgresql@17/bin:$HOME/.local/share/pnpm:$PATH";
     };
 
     # aliases
