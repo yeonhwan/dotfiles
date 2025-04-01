@@ -2,11 +2,12 @@
 {
   homebrew = {
       enable = true;
+      global.autoUpdate = false; 
       onActivation = {
-         autoUpdate = true; 
-         upgrade = true; 
-         cleanup = "zap";
-      };
+          autoUpdate = true; 
+          upgrade = true; 
+          cleanup = "zap";
+        };
 
         # App Store
         masApps = {
@@ -14,6 +15,7 @@
           Dropover = 1355679052;
           MinimaList = 1387764101;
           "카카오톡" = 869223134;
+          discord = 985746746;
         };
 
         taps = [
