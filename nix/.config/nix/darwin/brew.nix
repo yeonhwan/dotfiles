@@ -46,6 +46,7 @@
           "ghostty"
           "pgadmin4"
           "dbeaver-community"
+          "discord"
         ];
     };
 
