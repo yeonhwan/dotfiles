@@ -28,6 +28,7 @@
           "mas"
           "deno"
           "postgresql@17"
+          "mysql"
         ];
 
         casks = [
@@ -43,6 +44,7 @@
           "karabiner-elements"
           "ghostty"
           "pgadmin4"
+          "dbeaver-community"
         ];
     };
 
