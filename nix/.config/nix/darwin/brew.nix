@@ -4,8 +4,8 @@
       enable = true;
       global.autoUpdate = false; 
       onActivation = {
-          autoUpdate = true; 
-          upgrade = true; 
+          # autoUpdate = true; 
+          # upgrade = true; 
           cleanup = "zap";
         };
 
@@ -33,8 +33,8 @@
         ];
 
         casks = [
-          "raycast"
           "aerospace"
+          "raycast"
           "kitty"
           "visual-studio-code"
           "arc"
