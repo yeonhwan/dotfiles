@@ -1,1 +1,3 @@
 .DS_Store
+tmux/.config/tmux/last
+tmux/.config/tmux/tmux_resurrect*.txt
