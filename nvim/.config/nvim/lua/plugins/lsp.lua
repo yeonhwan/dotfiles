@@ -8,4 +8,15 @@ return {
       },
     },
   },
+  --lsp config
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = {
+        float = {
+          border = "rounded",
+        },
+      },
+    },
+  },
 }
