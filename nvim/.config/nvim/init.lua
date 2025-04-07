@@ -3,6 +3,9 @@ require("config.lazy")
 
 vim.opt.clipboard = ""
 
+vim.opt.pumblend = 0
+vim.opt.winblend = 0
+
 -- neovide setup
 if vim.g.neovide then
   -- option key is meta
