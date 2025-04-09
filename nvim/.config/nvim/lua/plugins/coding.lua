@@ -1,4 +1,8 @@
 return {
+  -- diffView
+  {
+    "sindrets/diffview.nvim",
+  },
   -- aerial
   {
     "stevearc/aerial.nvim",
