@@ -35,6 +35,7 @@
       ls = "eza --icons=always";
       cd = "z";
       lg = "lazygit";
+      ldoc = "lazydocker";
       ll = "ls -al";
       tm = "tmux";
       tmx = "tmuxinator";

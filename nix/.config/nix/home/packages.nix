@@ -37,6 +37,7 @@
     
     # dev
     lazygit
+    lazydocker
     neovim
     bun
 
