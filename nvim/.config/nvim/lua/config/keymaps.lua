@@ -74,3 +74,6 @@ end)
 
 -- Select all
 Map("n", "<C-a>", "gg<S-v>G")
+
+-- select colorscheme
+Map("n", "<C-c>:", ":FzfLua colorschemes<CR>")
