@@ -30,6 +30,10 @@
           "deno"
           "postgresql@17"
           "mysql"
+          {
+            name = "neovim";
+            args = [ "HEAD" ];
+          }
         ];
 
         casks = [
