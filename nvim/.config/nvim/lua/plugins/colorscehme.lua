@@ -21,6 +21,13 @@ return {
               fg = "fg1",
               bg = "NONE",
             },
+            TabLine = { bg = "NONE" },
+            TabLineFill = { bg = "NONE" },
+            TabLineSel = { bg = "NONE" },
+            WinBar = { bg = "NONE" },
+            WinBarNC = { bg = "NONE" },
+            StatusLine = { bg = "NONE" },
+            StatusLineNC = { bg = "NONE" },
           },
         },
       })
