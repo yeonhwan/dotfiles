@@ -16,19 +16,16 @@
     };
 
     sessionVariables = {
-      # pnpm global directory added
-      PNPM_HOME = "$HOME/.local/share/pnpm";
-      PATH = "/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.bun/bin:$HOME:/opt/homebrew/opt/postgresql@17/bin:$HOME/.local/share/pnpm:$PATH";
+      HISTFILE = "$HOME/.zhistory";
+      SAVEHIST = "1000";
+      HISTSIZE = "999";
     };
 
     # aliases
     shellAliases = {
       ".." = "cd ..";
-      desktop = "cd /Users/yh/desktop";
       dotconfig = "cd ~/dotfiles/ && nvim";
-      kittyconfig = "nvim ~/.config/kitty";
       vim = "nvim";
-      imgpr = "kitten icat $(fd -e jpg -e svg -e webp -e png -e jpeg -e gif | fzf)";
       buildflake = "darwin-rebuild switch --impure --flake \"$(readlink -f ~/.config/nix)\"#default";
       # garbage collect twice as sudo & user
       nixgc = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
@@ -89,8 +86,8 @@
       }
 
       # NVM
-      [ -s "$BREW_INSTALLED/nvm/nvm.sh" ] && . "$BREW_INSTALLED/nvm/nvm.sh"
-      [ -s "$BREW_INSTALLED/nvm/etc/bash_completion" ] && . "$BREW_INSTALLED/nvm/etc/bash_completion"
+      [ -s "$HOMEBREW_PREFIX/nvm/nvm.sh" ] && . "$HOMEBREW_PREFIX/nvm/nvm.sh"
+      [ -s "$HOMEBREW_PREFIX/nvm/etc/bash_completion" ] && . "$HOMEBREW_PREFIX/nvm/etc/bash_completion"
     '';
   };
 }

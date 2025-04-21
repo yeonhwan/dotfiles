@@ -21,7 +21,7 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "carbonfox",
+        colorscheme = "terafox",
       },
     },
     -- import/override with your plugins

@@ -32,16 +32,15 @@
     systemPath = [
       "/opt/homebrew/bin"
       "/opt/homebrew/sbin"
+      "/opt/homebrew/opt/postgresql@17/bin"
+      "$HOME/.bun/bin"
+      "$HOME/.local/share/pnpm"
     ];
     variables = {
       EDITOR = "nvim";
-      BREW_INSTALLED = "/opt/homebrew/opt";
       HOMEBREW_PREFIX = "/opt/homebrew/opt";
-      HISTFILE = "$HOME/.zhistory";
-      SAVEHIST = "1000";
-      HISTSIZE = "999";
-      NVM_DIR = "$BREW_INSTALLED/nvm";
-      BUN_INSTALL = "$HOME/.bun";
+      NVM_DIR = "$HOMEBREW_PREFIX/nvm";
+      PNPM_HOME = "$HOME/.local/share/pnpm";
     };
   };
 
