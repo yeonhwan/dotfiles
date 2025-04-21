@@ -88,6 +88,12 @@
       # NVM
       [ -s "$HOMEBREW_PREFIX/nvm/nvm.sh" ] && . "$HOMEBREW_PREFIX/nvm/nvm.sh"
       [ -s "$HOMEBREW_PREFIX/nvm/etc/bash_completion" ] && . "$HOMEBREW_PREFIX/nvm/etc/bash_completion"
+
+
+      # Load secret environment variables
+      if [ -f "$HOME/.secrets.env" ]; then
+        source "$HOME/.secrets.env"
+      fi
     '';
   };
 }
