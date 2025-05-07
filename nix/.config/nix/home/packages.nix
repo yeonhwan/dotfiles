@@ -39,6 +39,7 @@
     lazygit
     lazydocker
     bun
+    tokei
 
     # misc
     btop
