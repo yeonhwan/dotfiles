@@ -27,6 +27,7 @@
     tmux
     tmuxinator
     httpie
+    tree
 
     
     #shell
