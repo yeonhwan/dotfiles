@@ -30,6 +30,7 @@
           "deno"
           "postgresql@17"
           "mysql"
+          "fonttools"
           {
             name = "neovim";
             args = [ "HEAD" ];

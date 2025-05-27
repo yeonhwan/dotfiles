@@ -46,5 +46,6 @@
     btop
     cmatrix
     fastfetch
+    ffmpeg-full
   ];
 }
