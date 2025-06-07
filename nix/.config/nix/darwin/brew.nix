@@ -53,6 +53,8 @@
           "dbeaver-community"
           "discord"
           "docker"
+          "docker-compose"
+          "shottr"
         ];
     };
 
