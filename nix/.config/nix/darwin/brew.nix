@@ -30,6 +30,7 @@
           "deno"
           "postgresql@17"
           "mysql"
+          "docker-compose"
           "fonttools"
           {
             name = "neovim";
@@ -53,7 +54,6 @@
           "dbeaver-community"
           "discord"
           "docker"
-          "docker-compose"
           "shottr"
         ];
     };
