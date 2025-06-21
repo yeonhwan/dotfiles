@@ -37,6 +37,7 @@
     nushell
     
     # dev
+    go
     lazygit
     lazydocker
     bun
