@@ -31,6 +31,7 @@
           "postgresql@17"
           "mysql"
           "docker-compose"
+          "colima"
           "fonttools"
           {
             name = "neovim";
