@@ -94,6 +94,8 @@
       if [ -f "$HOME/.secrets.env" ]; then
         source "$HOME/.secrets.env"
       fi
+
+    eval "$(rbenv init - zsh)"
     '';
   };
 }

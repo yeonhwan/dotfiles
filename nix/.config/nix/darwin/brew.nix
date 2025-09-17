@@ -33,6 +33,7 @@
           "docker-compose"
           "colima"
           "fonttools"
+          "rbenv"
           {
             name = "neovim";
             args = [ "HEAD" ];
