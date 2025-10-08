@@ -51,12 +51,14 @@
           "iina"
           "obsidian"
           "karabiner-elements"
+          "obs"
           "ghostty"
           "pgadmin4"
           "dbeaver-community"
           "discord"
           "docker"
           "shottr"
+          "notion"
         ];
     };
 
