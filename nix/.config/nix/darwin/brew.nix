@@ -24,8 +24,8 @@
 
         brews = [
           "wget"
-          "nvm"
           "node"
+          "nvm"
           "mas"
           "deno"
           "postgresql@17"

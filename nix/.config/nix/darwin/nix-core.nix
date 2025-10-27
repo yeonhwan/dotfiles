@@ -39,7 +39,7 @@
     variables = {
       EDITOR = "nvim";
       HOMEBREW_PREFIX = "/opt/homebrew/opt";
-      NVM_DIR = "$HOMEBREW_PREFIX/nvm";
+      NVM_DIR = "$HOME/nvm";
       PNPM_HOME = "$HOME/.local/share/pnpm";
     };
   };
