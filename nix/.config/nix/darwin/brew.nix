@@ -34,6 +34,7 @@
           "colima"
           "fonttools"
           "rbenv"
+          "watchman"
           {
             name = "neovim";
             args = [ "HEAD" ];
@@ -59,6 +60,8 @@
           "docker"
           "shottr"
           "notion"
+          "zulu@17"
+          "android-studio"
         ];
     };
 

@@ -35,12 +35,16 @@
       "/opt/homebrew/opt/postgresql@17/bin"
       "$HOME/.bun/bin"
       "$HOME/.local/share/pnpm"
+      "$HOME/Library/Android/sdk/emulator"
+      "$HOME/Library/Android/sdk/platform-tools"
     ];
     variables = {
       EDITOR = "nvim";
       HOMEBREW_PREFIX = "/opt/homebrew/opt";
       NVM_DIR = "$HOME/nvm";
       PNPM_HOME = "$HOME/.local/share/pnpm";
+      JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home";
+      ANDROID_HOME="$HOME/Library/Android/sdk";
     };
   };
 
